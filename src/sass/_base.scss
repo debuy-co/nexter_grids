@@ -34,3 +34,12 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  //the first row is defined to get the 80 percent of the viewport height
+  //the second is define to enlarge to fill the minimun content available
+  //the third we be defined based on the viewport width
+  //all the others are defined as the second one
+}
