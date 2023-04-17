@@ -1,3 +1,8 @@
 .sidebar {
   background-color: $color-primary;
+
+  //The grid-column CSS shorthand property specifies a grid item's size and location within a grid column
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1; //se non ho dato dei nomi alle righe, li posso chiamare semplicemente con i numeri
+  //in questo caso non abbiamo chiamato le righe perche' sono quasi sempre meno importanti delle colonne quindi la
 }

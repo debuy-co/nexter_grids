@@ -1,3 +1,4 @@
 .header {
   background-color: $color-grey-dark-1;
+  grid-column: full-start / col-end 6; //in this case if we don't have a name I can use col-end and the last column number considering column 0 is the first occupied by the item
 }

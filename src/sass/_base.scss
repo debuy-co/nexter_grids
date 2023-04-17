@@ -36,10 +36,33 @@ body {
 }
 
 .container {
+  //The grid CSS property is a shorthand property that sets all of the explicit and implicit grid properties in a single declaration.
   display: grid;
+
+  //Using grid you specify one axis using grid-template-rows or grid-template-columns, you then specify how content should auto-repeat in the other axis using the implicit grid properties: grid-auto-rows, grid-auto-columns, and grid-auto-flow.
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   //the first row is defined to get the 80 percent of the viewport height
   //the second is define to enlarge to fill the minimun content available
   //the third we be defined based on the viewport width
   //all the others are defined as the second one
+
+  //grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+  //the first column is the sidebar and we want it to be 80px wide
+  //the second and last columns are simply 1 fractinal unit, so that it can take all the available space in order to center the 8 colums in the middle
+  //in the middle we designed to have 8 columns equally sized, which can have a minimum size of "min-content" and maximun 140px which means max 1200px
+
+  //in order to make it easier we can name the "grid lines" between the columns
+  //in particulat the second gridline have multiple names: "sidebar-end" and "full-start"
+  grid-template-columns:
+    [sidebar-start] 8rem
+    [sidebar-end full-start] minmax(6rem, 1fr)
+    //li diamo un minmax in modo tale che non scompare quando diventa troppo piccolo
+    [center-start]repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  //just for development purposes, alter we are going to remove it
+  & > * {
+    font-size: 3rem;
+    padding: 40px;
+  }
 }
