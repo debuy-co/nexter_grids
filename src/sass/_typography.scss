@@ -1,0 +1,32 @@
+//In this case we used a placeholder to avoid code repetition, which is similar to when we used mixin.
+//Generally, if you don’t have dynamic styles (because mixin can also get input values just like a function), using @extend (preferably using placeholders — unless you are referencing the class in the DOM) is good enough. Using mixins for static-only styles causes unnecessarily bloated stylesheets so it’s a good idea to keep the declarations minimal and only for dynamic declarations because it’s going to be duplicated.
+
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+}
+
+.heading-2 {
+  @extend %heading;
+}
+
+.heading-3 {
+  @extend %heading;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 1.9rem;
+
+  //here below are 2 modifiers
+  &--light {
+    color: $color-grey-light-1;
+  }
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+}

@@ -1,8 +1,35 @@
 .features {
-  background-color: $color-grey-light-2;
   grid-column: center-start/ center-end;
+
+  margin: 15rem 0;
 
   //here is the case where a grid element become a grid container (nesting of grids)
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  //grid-template-columns: repeat(3, 1fr);
+  //now instead of giving the number of columns we just mention "autofit" and it will automatically create a grid with a number of columns aligned with the width that we define
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+
+  align-items: start;
+}
+
+.feature {
+  //this element which is a grid item , will not become also a grid container
+  display: grid;
+  grid-template-columns: min-content 1fr; //so the first column the one of the icon will occipy the minimun space and than the rest will srink to the remaining available space
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    //grid-row: 1 / -1; //questo non funziona perche non abbiamo definito le righe con "grid-template-rows" e quindi non sa quale e' l'ultima
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem); //to center it with the text
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
 }

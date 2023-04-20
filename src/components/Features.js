@@ -8,42 +8,42 @@ function Features() {
         <svg className="feature__icon">
           <use href={`${sprite}#icon-global`}></use>
         </svg>
-        <h4 className="heading-4">Prova titolo</h4>
+        <h4 className="heading-4 heading-4--dark">Prova titolo</h4>
         <p className="feature__text">Prova testo</p>
       </div>
       <div className="feature">
         <svg className="feature__icon">
           <use href={`${sprite}#icon-global`}></use>
         </svg>
-        <h4 className="heading-4">Prova titolo</h4>
+        <h4 className="heading-4 heading-4--dark">Prova titolo</h4>
         <p className="feature__text">Prova testo</p>
       </div>
       <div className="feature">
         <svg className="feature__icon">
           <use href={`${sprite}#icon-global`}></use>
         </svg>
-        <h4 className="heading-4">Prova titolo</h4>
+        <h4 className="heading-4 heading-4--dark">Prova titolo</h4>
         <p className="feature__text">Prova testo</p>
       </div>
       <div className="feature">
         <svg className="feature__icon">
           <use href={`${sprite}#icon-global`}></use>
         </svg>
-        <h4 className="heading-4">Prova titolo</h4>
+        <h4 className="heading-4 heading-4--dark">Prova titolo</h4>
         <p className="feature__text">Prova testo</p>
       </div>
       <div className="feature">
         <svg className="feature__icon">
           <use href={`${sprite}#icon-global`}></use>
         </svg>
-        <h4 className="heading-4">Prova titolo</h4>
+        <h4 className="heading-4 heading-4--dark">Prova titolo</h4>
         <p className="feature__text">Prova testo</p>
       </div>
       <div className="feature">
         <svg className="feature__icon">
           <use href={`${sprite}#icon-global`}></use>
         </svg>
-        <h4 className="heading-4">Prova titolo</h4>
+        <h4 className="heading-4 heading-4--dark">Prova titolo</h4>
         <p className="feature__text">Prova testo</p>
       </div>
     </section>
