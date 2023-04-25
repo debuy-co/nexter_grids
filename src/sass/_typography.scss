@@ -12,10 +12,24 @@
 
 .heading-2 {
   @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+
+  //here below are 2 modifiers
+  &--light {
+    color: $color-grey-light-1;
+  }
+  &--dark {
+    color: $color-grey-dark-1;
+  }
 }
 
 .heading-3 {
   @extend %heading;
+  font-size: 1.6rem;
+  color: $color-primary;
+  text-transform: uppercase;
 }
 
 .heading-4 {
@@ -29,4 +43,37 @@
   &--dark {
     color: $color-grey-dark-1;
   }
+}
+
+.btn {
+  background-color: $color-primary;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+//here we write some helper classes in here just for simplicity so we don't have to create a new file just for this
+//these are the "margin bottom" classes
+//the reason why we do like that is because maybe the elements in which we are applying these classes are reausable and on another part of the code we don't want them to have margin bottom, therefore we create this like a helper class that can be used if necessary
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
 }

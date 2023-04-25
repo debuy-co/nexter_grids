@@ -1,5 +1,6 @@
 import React from "react";
 import Features from "./Features";
+import StoryContent from "./StoryContent";
 
 function Main() {
   return (
@@ -9,6 +10,7 @@ function Main() {
       <div className="realtors">Realtors</div>
       <Features />
       <div className="story__pictures">Story pictures</div>
+      <StoryContent />
       <div className="story__content">Story content</div>
       <section className="homes">Homes</section>
       <section className="gallery">Gallery</section>
