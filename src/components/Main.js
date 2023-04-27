@@ -3,6 +3,7 @@ import Features from "./Features";
 import StoryContent from "./StoryContent";
 import StoryPicture from "./StoryPicture";
 import Homes from "./Homes";
+import Gallery from "./Gallery";
 
 function Main() {
   return (
@@ -14,7 +15,7 @@ function Main() {
       <StoryPicture />
       <StoryContent />
       <Homes />
-      <section className="gallery">Gallery</section>
+      <Gallery />
       <footer className="footer">Footer</footer>
     </body>
   );
