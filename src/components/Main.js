@@ -2,6 +2,7 @@ import React from "react";
 import Features from "./Features";
 import StoryContent from "./StoryContent";
 import StoryPicture from "./StoryPicture";
+import Homes from "./Homes";
 
 function Main() {
   return (
@@ -12,8 +13,7 @@ function Main() {
       <Features />
       <StoryPicture />
       <StoryContent />
-      <div className="story__content">Story content</div>
-      <section className="homes">Homes</section>
+      <Homes />
       <section className="gallery">Gallery</section>
       <footer className="footer">Footer</footer>
     </body>
