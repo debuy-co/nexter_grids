@@ -10,16 +10,60 @@
 .home {
   background-color: $color-grey-light-1;
   display: grid;
-  grid-template-columns: repeat(auto-fit);
-  grid-template-rows: 1fr;
+  //as you saw many times we just define the number of columns and than we let the code to the define the number of rows.
+  //this is a pattern that is used many times but it is not always like this
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); //all we want is 2 columns with the same size
+  grid-row-gap: 3.5rem;
+
   &__img {
     width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2; //without this code the like will not overlap the img , because the code will automatically move the img down
+    z-index: 1;
   }
 
   &__like {
+    //these two belows are in order to position the element on the top right cell of the grid
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+    z-index: 2;
+
+    fill: $color-primary;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    margin: 1rem;
+    justify-self: end; //to have it move it all the way to the end
   }
 
   &__name {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    align-self: end;
+    transform: translateY(
+      50%
+    ); //move it 50% down compare to the height of the element
+    z-index: 3;
+
+    font-family: $font-display;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: $color-secondary;
+    color: #fff;
+    font-weight: 400;
+
+    width: 80%;
+    justify-self: center;
+  }
+
+  //this below is a dedicated class for the button on top of the already used class btn
+  &__button {
+    grid-column: 1/-1;
   }
 
   &__location,
@@ -28,13 +72,20 @@
   &__price {
     /*this is below is considered as a nested element inside these 4 elements*/
 
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex; //even though we are using grid for almost all now , for this small alignment staff , flexbox is going to be easier and more straitforward than the rest
+    align-items: center;
+
     svg {
       fill: $color-primary;
       height: 2rem;
       width: 2rem;
+      margin-right: 1rem;
     }
 
     p {
+      grid-column: 1/-1;
     }
   }
 }

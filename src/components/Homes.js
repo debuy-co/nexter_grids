@@ -8,7 +8,7 @@ function Homes() {
       <div className="home">
         <img src={Home1} alt="Home 1" className="home__img" />
         <svg className="home__like">
-          <use href={`${sprite}#icon-hearth-full`}></use>
+          <use href={`${sprite}#icon-heart-full`}></use>
         </svg>
         <h5 className="home__name">Beautiful family house</h5>
         <div className="home__location">
@@ -41,7 +41,7 @@ function Homes() {
           </svg>
           <p>$ 1,200,000</p>
         </div>
-        <button className="cta">Prova</button>
+        <button className="btn home__button">Prova</button>
       </div>
       <div className="home">home card 2</div>
       <div className="home">home card 3</div>
