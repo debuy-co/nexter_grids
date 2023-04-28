@@ -12,7 +12,7 @@ function Header() {
       <h3 className="heading-3">H3 titolo</h3>
       <h1 className="heading-1">H1 titolo</h1>
       <button className="btn header__btn">more info</button>
-      <div className="header__seenon-text">See on</div>
+      <div className="header__seenon-text">Seen on</div>
       <div className="header__seenon-logos">
         <img src={bbc} alt="Seen on logo 1" />
         <img src={forbes} alt="Seen on logo 2" />
