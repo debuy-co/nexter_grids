@@ -4,6 +4,7 @@ import StoryContent from "./StoryContent";
 import StoryPicture from "./StoryPicture";
 import Homes from "./Homes";
 import Gallery from "./Gallery";
+import Footer from "./Footer";
 
 function Main() {
   return (
@@ -16,7 +17,7 @@ function Main() {
       <StoryContent />
       <Homes />
       <Gallery />
-      <footer className="footer">Footer</footer>
+      <Footer />
     </body>
   );
 }
