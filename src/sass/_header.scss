@@ -1,4 +1,40 @@
 .header {
   background-color: $color-grey-dark-1;
   grid-column: full-start / col-end 6; //in this case if we don't have a name I can use col-end and the last column number considering column 0 is the first occupied by the item
+
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.93),
+      rgba($color-secondary, 0.93)
+    ),
+    url(../assets/img/hero.jpeg);
+
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  display: grid;
+  grid-row-gap: 1.5rem;
+  grid-template-rows: 1fr min-content 6rem 1fr; //if we don't define like that all the space (Across the Y axes) will be divided equally, instead in this way we have the first row to occupy all the available space and the others the space specified
+  grid-template-columns: max-content; //in this way we will have only 1 column which occupy only the max contento of the largest item
+  justify-content: center; //so all the conent is now centered
+
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+  }
+
+  &__btn {
+    align-self: start;
+    justify-self: start;
+  }
+
+  &__seenon-text {
+  }
+
+  &__seenon-logos {
+    img {
+      height: 2.5rem;
+    }
+  }
 }

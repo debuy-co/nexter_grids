@@ -6,12 +6,13 @@ import Homes from "./Homes";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
+import Header from "./Header";
 
 function Main() {
   return (
     <body className="container">
       <Sidebar />
-      <header className="header">Header</header>
+      <Header />
       <div className="realtors">Realtors</div>
       <Features />
       <StoryPicture />
