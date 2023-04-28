@@ -1,8 +1,39 @@
 .sidebar {
+  padding: 0;
   background-color: $color-primary;
 
   //The grid-column CSS shorthand property specifies a grid item's size and location within a grid column
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; //se non ho dato dei nomi alle righe, li posso chiamare semplicemente con i numeri
   //in questo caso non abbiamo chiamato le righe perche' sono quasi sempre meno importanti delle colonne quindi la
+  display: flex; //as we see flex box is good for this really small applications , like centering the btn by using below property "justify-content"
+  justify-content: center;
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+
+  background-color: #fff;
+
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem;
+
+  //here below we just add a line before and a line after in order to have the 3 rows that shall
+  &::before,
+  &::after {
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    content: ""; //to make it actually visible
+    display: block;
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1.3rem);
+  }
 }

@@ -5,11 +5,12 @@ import StoryPicture from "./StoryPicture";
 import Homes from "./Homes";
 import Gallery from "./Gallery";
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 
 function Main() {
   return (
     <body className="container">
-      <div className="sidebar">Sidebar</div>
+      <Sidebar />
       <header className="header">Header</header>
       <div className="realtors">Realtors</div>
       <Features />
