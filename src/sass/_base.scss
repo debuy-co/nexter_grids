@@ -15,6 +15,10 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; //corrisponde to 1200px and is the result of 1200px/16
+$bp-large: 62.5em; //1000px
+
 *,
 *::after,
 *::before {
@@ -26,6 +30,10 @@ $font-display: "Josefin Sans", sans-serif;
 html {
   box-sizing: border-box; //it was already explained in the previous project why we write in this way
   font-size: 62.5%; //1rem = 10px --> 10px/16px = 62.5%
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -61,9 +69,20 @@ body {
     [center-start]repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr) [full-end];
 
-  //just for development purposes, alter we are going to remove it
-  & > * {
-    font-size: 3rem;
-    padding: 40px;
+  @media only screen and (max-width: $bp-large) {
+    //added a row
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+
+    //first column is removed
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start]repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr) [full-end];
   }
+
+  // //just for development purposes, alter we are going to remove it
+  // & > * {
+  //   font-size: 3rem;
+  //   padding: 40px;
+  // }
 }

@@ -15,8 +15,17 @@
 
   display: grid;
   grid-row-gap: 1.5rem;
-  grid-template-rows: 1fr min-content 6rem 1fr; //if we don't define like that all the space (Across the Y axes) will be divided equally, instead in this way we have the first row to occupy all the available space and the others the space specified
-  grid-template-columns: max-content; //in this way we will have only 1 column which occupy only the max contento of the largest item
+
+  //grid-template-rows: 1fr min-content 6rem 1fr; //if we don't define like that all the space (Across the Y axes) will be divided equally, instead in this way we have the first row to occupy all the available space and the others the space specified
+  grid-template-rows: 1fr min-content minmax(min-content, 6rem) 1fr;
+  //the above one has been changed so that it will scale properly, in this way we say the row (before defined to 6rem) shall never be more taller than the content
+
+  //grid-template-columns: max-content; //in this way we will have only 1 column which occupy only the max content of the largest item
+  grid-template-columns: minmax(
+    min-content,
+    max-content
+  ); //the above one has been changed so that it will scale properly, in this way we say the column shall never be more narrow than the content
+
   justify-content: center; //so all the conent is now centered
 
   &__logo {
@@ -53,7 +62,8 @@
     grid-column-gap: 3rem;
     justify-items: center;
     img {
-      height: 2.5rem;
+      max-height: 2.5rem; //we change it to max height in order to solve the problem with smaller screens, but we need to specify also the max-widht otherwise it will not scale properly
+      max-width: 100%;
       filter: brightness(70%);
     }
   }
