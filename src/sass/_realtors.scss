@@ -1,6 +1,11 @@
 .realtors {
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
   padding: 3rem;
 
   display: grid;
@@ -11,6 +16,15 @@
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
+
     grid-column-gap: 2rem;
 
     grid-row-gap: 5vh; //why in this way? because we want this spacing to change whenever we change the height of the viewport

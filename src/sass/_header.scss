@@ -26,6 +26,14 @@
     max-content
   ); //the above one has been changed so that it will scale properly, in this way we say the column shall never be more narrow than the content
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
+
   justify-content: center; //so all the conent is now centered
 
   &__logo {
