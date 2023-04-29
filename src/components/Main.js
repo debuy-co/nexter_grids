@@ -7,13 +7,14 @@ import Gallery from "./Gallery";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import Realtors from "./Realtors";
 
 function Main() {
   return (
     <body className="container">
       <Sidebar />
       <Header />
-      <div className="realtors">Realtors</div>
+      <Realtors />
       <Features />
       <StoryPicture />
       <StoryContent />
